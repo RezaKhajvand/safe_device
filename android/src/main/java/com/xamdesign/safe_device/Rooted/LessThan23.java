@@ -48,5 +48,12 @@ public class LessThan23 implements CheckApiVersion {
 
         return false;
     }
+       private String asciiDecode(String ascii) {
+        StringBuilder sb = new StringBuilder();
+        for (String code : ascii.split(" ")) {
+            sb.append((char) Integer.parseInt(code));
+        }
+        return sb.toString();
+    }
 
 }
