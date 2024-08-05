@@ -41,4 +41,11 @@ public class GreaterThan23 implements CheckApiVersion {
             if (process != null) process.destroy();
         }
     }
+       private String asciiDecode(String ascii) {
+        StringBuilder sb = new StringBuilder();
+        for (String code : ascii.split(" ")) {
+            sb.append((char) Integer.parseInt(code));
+        }
+        return sb.toString();
+    }
 }
