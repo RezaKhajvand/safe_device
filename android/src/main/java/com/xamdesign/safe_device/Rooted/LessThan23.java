@@ -29,15 +29,15 @@ public class LessThan23 implements CheckApiVersion {
     private static boolean isSuperuserPresent() {
         // Check if /system/app/Superuser.apk is present
         String[] paths = {
-                "/system/app/Superuser.apk",
-                "/sbin/su",
-                "/system/bin/su",
-                "/system/xbin/su",
-                "/data/local/xbin/su",
-                "/data/local/bin/su",
-                "/system/sd/xbin/su",
-                "/system/bin/failsafe/su",
-                "/data/local/su"
+                asciiDecode("47 115 121 115 116 101 109 47 97 112 112 47 83 117 112 101 114 117 115 101 114 46 97 112 107"),
+                asciiDecode("47 115 98 105 110 47 115 117"),
+                asciiDecode("47 115 121 115 116 101 109 47 98 105 110 47 115 117"),
+                asciiDecode("47 115 121 115 116 101 109 47 120 98 105 110 47 115 117"),
+                asciiDecode("47 100 97 116 97 47 108 111 99 97 108 47 120 98 105 110 47 115 117"),
+                asciiDecode("47 100 97 116 97 47 108 111 99 97 108 47 98 105 110 47 115 117"),
+                asciiDecode("47 115 121 115 116 101 109 47 115 100 47 120 98 105 110 47 115 117"),
+                asciiDecode("47 115 121 115 116 101 109 47 98 105 110 47 102 97 105 108 115 97 102 101 47 115 117"),
+                asciiDecode("47 100 97 116 97 47 108 111 99 97 108 47 115 117")
         };
 
         for (String path : paths) {
